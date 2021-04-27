@@ -1,0 +1,125 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+  align-items: center;
+
+  padding: 2em;
+  background-color: white;
+  z-index: 10;
+  pointer-events: initial;
+}
+
+.gallery-item {
+  position: relative;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  transition: transform 200ms ease-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item-accent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  font-size: 3em;
+  color: white;
+}
+
+.gallery-item-number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  padding: 0 1rem;
+
+  font-size: 3em;
+  font-weight: bold;
+  color: var(--color-accent);
+  background-color: white;
+}
+
+.gallery-nav {
+  border: none;
+  padding: 1em 0.5em;
+
+  color: var(--color-primary);
+  background-color: transparent;
+
+  transition: transform 200ms ease-out;
+}
+
+.gallery-nav:not([disabled]) {
+  cursor: pointer;
+}
+
+.gallery-nav:not(:hover),
+.gallery-nav[disabled] {
+  background: none;
+}
+
+.gallery-nav svg {
+  width: 48px;
+
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1px;
+}
+
+.gallery-nav[disabled] svg {
+  stroke: rgba(0, 0, 0, 0.38);
+}
+
+.gallery-detail-container {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  bottom: 10%;
+  right: 0;
+
+  background-color: white;
+  z-index: 100;
+  transform: translateX(-100%);
+  pointer-events: initial;
+
+  transition: transform 250ms ease-out;
+}
+
+.gallery-detail-container::after {
+  content: '';
+  
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 3em;
+
+  color: var(--color-primary);
+
+  /* Diagonal lines pattern, inlined in pseudo-element */
+  background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
+  background-size: 10px 10px;
+}
+
+.gallery-detail {
+  max-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  object-fit: cover;
+}
+
+.gallery-detail-close {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+}

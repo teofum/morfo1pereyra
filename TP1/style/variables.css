@@ -1,0 +1,5 @@
+:root {
+  --color-primary: hsl(120, 88%, 77%);
+  --color-accent: hsl(240, 100%, 27%);
+  --color-text: black;
+}

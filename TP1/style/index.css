@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans';
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 1.25em;
+  max-width: 70ch;
+}
+
+p.short {
+  max-width: 48ch;
+}
+
+.grid-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  gap: 40px;
+}
+
+.panel-left {
+  grid-column: 1 / span 1;
+}
+
+.panel-right {
+  grid-column: 2 / span 1;
+}
+
+.bg-two-thirds {
+  width: 66%;
+  max-height: 100%;
+}
+
+.parallax {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+.parallax > * {
+  scroll-snap-align: center;
+}
+
+.parallax-group:nth-child(2n+1) {
+  z-index: 10;
+}
+
+.main-title-bg {
+  align-self: stretch;
+  justify-self: start;
+
+  width: 3ch;
+  font-size: 6em;
+
+  color: white;
+}
+
+.main-title {
+  font-size: 6em;
+  margin-left: 2rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0.5em 0;
+
+  font-size: 4.5em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Group 1: Hero banner */
+
+.hero {
+  background-color: var(--color-primary);
+}
+
+.hero-image {
+  position: relative;
+
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.hero-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: calc(100% + 200px);
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay img {
+  filter: grayscale(1);
+}
+
+.overlay::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  mix-blend-mode: screen;
+}
+
+.overlay.accent::after {
+  background-color: var(--color-accent);
+}
+
+.overlay.primary::after {
+  background-color: var(--color-primary);
+}
+
+.overlay.background::after {
+  background-color: var(--color-primary);
+}
+
+/* Group 2: Elección de Objeto */
+
+.group2-bg {
+  position: relative;
+  background-color: white;
+}
+
+.group2-bg-lines {
+  color: white;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.group2-bg-logo {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+  width: 30%;
+  max-width: 100vh;
+
+  opacity: 1;
+}
+
+.text-container {
+  position: relative;
+  align-self: center;
+  padding: 0 3em;
+
+  background-color: white;
+}
+
+.panel-right.text-container {
+  justify-self: start;
+}
+
+.panel-left.text-container {
+  justify-self: end;
+}
+
+.text-container::after {
+  content: '';
+
+  position: absolute;
+  bottom: 2em;
+  left: 1em;
+  width: 100%;
+  height: 100%;
+
+  color: var(--color-primary);
+  z-index: -1;
+
+  /* Diagonal lines pattern, inlined in pseudo-element */
+  background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
+  background-size: 10px 10px;
+}
+
+.text-body {
+  margin-left: 1em;
+  margin-bottom: 3em;
+  font-weight: 500;
+}
+
+.text-image {
+  width: calc(100% + 6em);
+  height: 16em;
+  margin: 0 -3em;
+}
+
+.text-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Group 3: Recorrido fotográfico */
+
+.group3-base {
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.group3-content {
+  z-index: 1;
+}
+
+.group3-title {
+  align-self: start;
+  margin: 3em -10em 0 0;
+  padding: 1px 0 1px 4em;
+
+  color: white;
+}
+
+.group3-title h2.section-title {
+  color: var(--color-accent);
+}
+
+.group3-body {
+  margin-left: 4em;
+  font-weight: 500;
+}
+
+.group3-gallery {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+}
+
+.group4-gallery {
+  align-self: center;
+}
