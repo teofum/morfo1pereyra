@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -51,6 +53,11 @@ p.short {
   scroll-snap-align: center;
 }
 
+.parallax-layer,
+.grid-panel > * {
+  position: relative;
+}
+
 .parallax-group:nth-child(2n+1) {
   z-index: 10;
 }
@@ -80,6 +87,25 @@ p.short {
   text-transform: uppercase;
 }
 
+.big-title {
+  align-self: start;
+  margin: 3em -10em 0 0;
+  padding: 1px 0 1px 4em;
+
+  color: white;
+}
+
+.panel-right .big-title {
+  margin: 3em 0 0 -10em;
+  padding: 1px 4em 1px 0;
+
+  text-align: right;
+}
+
+.big-title h2.section-title {
+  color: var(--color-accent);
+}
+
 .background-image {
   width: 100%;
   height: 100%;
@@ -93,7 +119,7 @@ p.short {
 
 /* Group 1: Hero banner */
 
-.hero {
+.solid-background {
   background-color: var(--color-primary);
 }
 
@@ -219,33 +245,24 @@ p.short {
 
 /* Group 3: Recorrido fotográfico */
 
-.group3-base {
-  background-color: var(--color-primary);
-  position: relative;
-}
-
 .group3-content {
   z-index: 1;
 }
 
-.group3-title {
-  align-self: start;
-  margin: 3em -10em 0 0;
-  padding: 1px 0 1px 4em;
-
-  color: white;
-}
-
-.group3-title h2.section-title {
-  color: var(--color-accent);
-}
-
-.group3-body {
-  margin-left: 4em;
+.panel-body {
   font-weight: 500;
 }
 
-.group3-gallery {
+.panel-left .panel-body {
+  margin-left: 4em;
+}
+
+.panel-right .panel-body {
+  margin-left: auto;
+  margin-right: 4em;
+}
+
+.wide-gallery {
   position: absolute;
   left: 10%;
   bottom: 10%;
