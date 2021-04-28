@@ -26,17 +26,35 @@ p.short {
 
 .grid-panel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 100%;
   gap: 40px;
 }
 
 .panel-left {
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 3;
 }
 
 .panel-right {
-  grid-column: 2 / span 1;
+  grid-column: 4 / span 3;
+}
+
+@media screen and (max-width: 1600px) {
+  .panel-left.main {
+    grid-column: 1 / span 4;
+  }
+
+  .panel-left:not(.main) {
+    grid-column: 1 / span 2;
+  }
+
+  .panel-right.main {
+    grid-column: 3 / span 4;
+  }
+  
+  .panel-right:not(.main) {
+    grid-column: 5 / span 2;
+  }
 }
 
 .bg-two-thirds {
