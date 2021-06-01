@@ -108,14 +108,14 @@ p.short {
 .big-title {
   align-self: start;
   margin: 3em -10em 0 0;
-  padding: 1px 0 1px 4em;
+  padding: 1px 10em 1px 4em;
 
   color: white;
 }
 
 .panel-right .big-title {
   margin: 3em 0 0 -10em;
-  padding: 1px 4em 1px 0;
+  padding: 1px 4em 1px 10em;
 
   text-align: right;
 }
@@ -263,7 +263,7 @@ p.short {
 
 /* Group 3: Recorrido fotográfico */
 
-.group3-content {
+.group-content {
   z-index: 1;
 }
 

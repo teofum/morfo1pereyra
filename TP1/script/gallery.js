@@ -145,3 +145,5 @@ const initGallery = (name, count, cols, rows) => {
 initGallery('photos', 20, 3, 1);
 initGallery('sintesis', 8, 2, 2);
 initGallery('stencil', 14, 3, 1);
+initGallery('papercut', 11, 3, 1);
+initGallery('modulada', 11, 3, 1);
