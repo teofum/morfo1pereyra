@@ -95,6 +95,7 @@ p.short {
   margin-left: 2rem;
   color: var(--color-accent);
   text-transform: uppercase;
+  text-shadow: 9px 9px 0px var(--color-primary);
 }
 
 .section-title {
@@ -122,6 +123,12 @@ p.short {
 
 .big-title h2.section-title {
   color: var(--color-accent);
+  text-shadow: 7px 7px 0px var(--color-primary);
+}
+
+.bigger-title h2.section-title {
+  font-size: 7.5em;
+  text-shadow: 12px 12px 0px var(--color-primary);
 }
 
 .background-image {
@@ -184,6 +191,10 @@ p.short {
 
 .overlay.background::after {
   background-color: var(--color-primary);
+}
+
+.gallery-3d {
+  height: 100%;
 }
 
 /* Group 2: Elección de Objeto */
