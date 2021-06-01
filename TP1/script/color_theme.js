@@ -1,6 +1,6 @@
 const themes = [
   {
-    primary: 'hsl(120, 88%, 75%)',
+    primary: 'hsl(120, 88%, 72%)',
     accent: 'hsl(240, 100%, 27%)'
   },
   {
@@ -8,7 +8,7 @@ const themes = [
     accent: 'hsl(240, 100%, 27%)'
   },
   {
-    primary: 'hsl(187, 65%, 75%)',
+    primary: 'hsl(187, 85%, 72%)',
     accent: 'hsl(240, 100%, 27%)'
   },
   {

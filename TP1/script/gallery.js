@@ -147,3 +147,4 @@ initGallery('sintesis', 8, 2, 2);
 initGallery('stencil', 14, 3, 1);
 initGallery('papercut', 11, 3, 1);
 initGallery('modulada', 11, 3, 1);
+initGallery('lenguaje', 15, 2, 2);
